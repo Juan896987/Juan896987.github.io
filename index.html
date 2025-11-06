@@ -12,6 +12,8 @@
             <h1>Fascina</h1>
             <nav>
                 <a href="#home">Inicio</a>
+                <a href="#products">Productos</a>
+                <a href="#services">Servicios</a>
                 <a href="#about">Sobre Nosotros</a>
                 <a href="#contact">Contacto</a>
             </nav>
@@ -27,9 +29,94 @@
         
         <div class="media-container">
             <img src="a18300b8-217e-4451-9a44-a859f6f6dbda.jpg" alt="A clean, minimalist home interior" class="clean-image">
-            <audio controls autoplay class="media-player">
+            <audio controls class="media-player">
                 <source src="Loonboon.mp3" type="audio/mpeg">
             </audio>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="container">
+            <h2>Nuestros Productos de Limpieza</h2>
+            <p class="section-description">Productos ecológicos de alta calidad para mantener tu hogar impecable</p>
+            
+            <div class="slider-container">
+                <button class="slider-btn prev" onclick="moveSlider('products', -1)">&#10094;</button>
+                <div class="slider" id="products-slider">
+                    <div class="product-card">
+                        <div class="product-image">🧴</div>
+                        <h3>Kit Limpieza Básico</h3>
+                        <p class="product-description">Incluye: Desinfectante multiusos, limpiador de vidrios y paños de microfibra.</p>
+                        <p class="price">$35.000 COP</p>
+                        <button class="btn-product">Solicitar</button>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">✨</div>
+                        <h3>Kit Limpieza Premium</h3>
+                        <p class="product-description">Incluye: Desinfectante, limpiador de pisos, quitamanchas, esponjas y guantes.</p>
+                        <p class="price">$65.000 COP</p>
+                        <button class="btn-product">Solicitar</button>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">🌟</div>
+                        <h3>Kit Limpieza Profesional</h3>
+                        <p class="product-description">Kit completo: Todos los productos anteriores más cera para muebles, ambientador y trapeador profesional.</p>
+                        <p class="price">$120.000 COP</p>
+                        <button class="btn-product">Solicitar</button>
+                    </div>
+                </div>
+                <button class="slider-btn next" onclick="moveSlider('products', 1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <p class="section-description">Servicios profesionales adaptados a tus necesidades</p>
+            
+            <div class="slider-container">
+                <button class="slider-btn prev" onclick="moveSlider('services', -1)">&#10094;</button>
+                <div class="slider" id="services-slider">
+                    <div class="service-card">
+                        <div class="service-icon">🏠</div>
+                        <h3>Limpieza Express</h3>
+                        <p class="service-description">Limpieza rápida de áreas comunes, perfecta para mantenimiento semanal.</p>
+                        <ul class="service-features">
+                            <li>Duración: 2 horas</li>
+                            <li>Áreas comunes</li>
+                            <li>Productos incluidos</li>
+                        </ul>
+                        <p class="price">$80.000 COP</p>
+                        <button class="btn-product">Agendar</button>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🧹</div>
+                        <h3>Limpieza Profunda</h3>
+                        <p class="service-description">Limpieza completa de tu hogar, incluye todas las habitaciones y áreas difíciles.</p>
+                        <ul class="service-features">
+                            <li>Duración: 4-5 horas</li>
+                            <li>Casa completa</li>
+                            <li>Limpieza detallada</li>
+                        </ul>
+                        <p class="price">$150.000 COP</p>
+                        <button class="btn-product">Agendar</button>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">💎</div>
+                        <h3>Limpieza Premium VIP</h3>
+                        <p class="service-description">Servicio de lujo con limpieza exhaustiva, organización y detalles especiales.</p>
+                        <ul class="service-features">
+                            <li>Duración: 6-8 horas</li>
+                            <li>Organización incluida</li>
+                            <li>Equipo especializado</li>
+                        </ul>
+                        <p class="price">$280.000 COP</p>
+                        <button class="btn-product">Agendar</button>
+                    </div>
+                </div>
+                <button class="slider-btn next" onclick="moveSlider('services', 1)">&#10095;</button>
+            </div>
         </div>
     </section>
 
@@ -72,5 +159,38 @@
     <footer>
         <p>© 2025 Fascina. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        let currentSlide = {
+            products: 0,
+            services: 0
+        };
+
+        function moveSlider(type, direction) {
+            const slider = document.getElementById(`${type}-slider`);
+            const cards = slider.children;
+            const totalCards = cards.length;
+            
+            currentSlide[type] += direction;
+            
+            if (currentSlide[type] < 0) {
+                currentSlide[type] = totalCards - 1;
+            } else if (currentSlide[type] >= totalCards) {
+                currentSlide[type] = 0;
+            }
+            
+            const offset = -currentSlide[type] * 100;
+            slider.style.transform = `translateX(${offset}%)`;
+        }
+
+        // Auto-slide cada 5 segundos
+        setInterval(() => {
+            moveSlider('products', 1);
+        }, 5000);
+
+        setInterval(() => {
+            moveSlider('services', 1);
+        }, 5500);
+    </script>
 </body>
 </html>
