@@ -14,6 +14,9 @@
                 <a href="#home">Inicio</a>
                 <a href="#products">Productos</a>
                 <a href="#services">Servicios</a>
+                <a href="#packages">Paquetes</a>
+                <a href="#video">Video</a>
+                <a href="#testimonials">Testimonios</a>
                 <a href="#about">Sobre Nosotros</a>
                 <a href="#contact">Contacto</a>
             </nav>
@@ -33,6 +36,30 @@
                 <source src="Loonboon.mp3" type="audio/mpeg">
             </audio>
         </div>
+
+        <!-- Nueva sección de características -->
+        <div class="features-home">
+            <div class="feature-item">
+                <div class="feature-icon">🏆</div>
+                <h3>Calidad Garantizada</h3>
+                <p>Satisfacción 100% o te devolvemos tu dinero</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🌱</div>
+                <h3>Productos Ecológicos</h3>
+                <p>Cuidamos tu salud y el medio ambiente</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">⚡</div>
+                <h3>Servicio Rápido</h3>
+                <p>Agenda en menos de 5 minutos</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">💰</div>
+                <h3>Precios Justos</h3>
+                <p>Sin costos ocultos, transparencia total</p>
+            </div>
+        </div>
     </section>
 
     <section id="products">
@@ -46,23 +73,44 @@
                     <div class="product-card">
                         <div class="product-image">🧴</div>
                         <h3>Kit Limpieza Básico</h3>
-                        <p class="product-description">Incluye: Desinfectante multiusos, limpiador de vidrios y paños de microfibra.</p>
+                        <p class="product-description">Perfecto para iniciar. Incluye: Desinfectante multiusos, limpiador de vidrios y paños de microfibra de alta absorción.</p>
                         <p class="price">$35.000 COP</p>
-                        <button class="btn-product">Solicitar</button>
+                        <button class="btn-product" onclick="addToCart('Kit Básico', 35000)">Solicitar</button>
                     </div>
                     <div class="product-card">
                         <div class="product-image">✨</div>
                         <h3>Kit Limpieza Premium</h3>
-                        <p class="product-description">Incluye: Desinfectante, limpiador de pisos, quitamanchas, esponjas y guantes.</p>
+                        <p class="product-description">Lo más vendido. Incluye: Desinfectante, limpiador de pisos, quitamanchas profesional, esponjas antibacteriales y guantes reforzados.</p>
                         <p class="price">$65.000 COP</p>
-                        <button class="btn-product">Solicitar</button>
+                        <button class="btn-product" onclick="addToCart('Kit Premium', 65000)">Solicitar</button>
                     </div>
                     <div class="product-card">
                         <div class="product-image">🌟</div>
                         <h3>Kit Limpieza Profesional</h3>
-                        <p class="product-description">Kit completo: Todos los productos anteriores más cera para muebles, ambientador y trapeador profesional.</p>
+                        <p class="product-description">Kit completo: Todos los productos anteriores más cera para muebles, ambientador natural, trapeador profesional y organizador de productos.</p>
                         <p class="price">$120.000 COP</p>
-                        <button class="btn-product">Solicitar</button>
+                        <button class="btn-product" onclick="addToCart('Kit Profesional', 120000)">Solicitar</button>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">🧽</div>
+                        <h3>Kit Cocina Especializada</h3>
+                        <p class="product-description">Específico para cocina. Incluye: Desengrasante industrial, limpiador de acero inoxidable, quitasarro para grifos y esponjas no abrasivas.</p>
+                        <p class="price">$48.000 COP</p>
+                        <button class="btn-product" onclick="addToCart('Kit Cocina', 48000)">Solicitar</button>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">🚿</div>
+                        <h3>Kit Baño Completo</h3>
+                        <p class="product-description">Limpieza profunda de baños. Incluye: Desinfectante anti-moho, limpiador de azulejos, descalcificador, cepillos especiales y aromatizante.</p>
+                        <p class="price">$52.000 COP</p>
+                        <button class="btn-product" onclick="addToCart('Kit Baño', 52000)">Solicitar</button>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">🪟</div>
+                        <h3>Kit Ventanas y Cristales</h3>
+                        <p class="product-description">Deja todo brillante. Incluye: Limpiador de vidrios profesional, rasqueta de precisión, paños especiales de microfibra y spray anti-empañamiento.</p>
+                        <p class="price">$42.000 COP</p>
+                        <button class="btn-product" onclick="addToCart('Kit Ventanas', 42000)">Solicitar</button>
                     </div>
                 </div>
                 <button class="slider-btn next" onclick="moveSlider('products', 1)">&#10095;</button>
@@ -86,9 +134,10 @@
                             <li>Duración: 2 horas</li>
                             <li>Áreas comunes</li>
                             <li>Productos incluidos</li>
+                            <li>1 profesional</li>
                         </ul>
                         <p class="price">$80.000 COP</p>
-                        <button class="btn-product">Agendar</button>
+                        <button class="btn-product" onclick="scheduleService('Limpieza Express')">Agendar</button>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">🧹</div>
@@ -98,9 +147,10 @@
                             <li>Duración: 4-5 horas</li>
                             <li>Casa completa</li>
                             <li>Limpieza detallada</li>
+                            <li>2 profesionales</li>
                         </ul>
                         <p class="price">$150.000 COP</p>
-                        <button class="btn-product">Agendar</button>
+                        <button class="btn-product" onclick="scheduleService('Limpieza Profunda')">Agendar</button>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">💎</div>
@@ -110,12 +160,171 @@
                             <li>Duración: 6-8 horas</li>
                             <li>Organización incluida</li>
                             <li>Equipo especializado</li>
+                            <li>3 profesionales</li>
                         </ul>
                         <p class="price">$280.000 COP</p>
-                        <button class="btn-product">Agendar</button>
+                        <button class="btn-product" onclick="scheduleService('Limpieza Premium VIP')">Agendar</button>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🏢</div>
+                        <h3>Limpieza de Oficinas</h3>
+                        <p class="service-description">Servicio especializado para espacios de trabajo. Mantenemos tu oficina impecable y profesional.</p>
+                        <ul class="service-features">
+                            <li>Duración: 3-4 horas</li>
+                            <li>Desinfección de áreas</li>
+                            <li>Limpieza de equipos</li>
+                            <li>Horario flexible</li>
+                        </ul>
+                        <p class="price">$180.000 COP</p>
+                        <button class="btn-product" onclick="scheduleService('Limpieza de Oficinas')">Agendar</button>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🎉</div>
+                        <h3>Limpieza Post-Evento</h3>
+                        <p class="service-description">¿Hiciste una fiesta? Nosotros nos encargamos. Dejamos tu hogar como nuevo después de cualquier evento.</p>
+                        <ul class="service-features">
+                            <li>Duración: 4-6 horas</li>
+                            <li>Limpieza intensiva</li>
+                            <li>Retiro de basura</li>
+                            <li>Disponibilidad 24/7</li>
+                        </ul>
+                        <p class="price">$200.000 COP</p>
+                        <button class="btn-product" onclick="scheduleService('Limpieza Post-Evento')">Agendar</button>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🏗️</div>
+                        <h3>Limpieza Post-Construcción</h3>
+                        <p class="service-description">Limpieza especializada después de obras o remodelaciones. Eliminamos polvo, escombros y residuos.</p>
+                        <ul class="service-features">
+                            <li>Duración: 8-10 horas</li>
+                            <li>Equipo especializado</li>
+                            <li>Múltiples profesionales</li>
+                            <li>Herramientas industriales</li>
+                        </ul>
+                        <p class="price">$350.000 COP</p>
+                        <button class="btn-product" onclick="scheduleService('Limpieza Post-Construcción')">Agendar</button>
                     </div>
                 </div>
                 <button class="slider-btn next" onclick="moveSlider('services', 1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nueva sección de paquetes -->
+    <section id="packages">
+        <div class="container">
+            <h2>Paquetes Mensuales</h2>
+            <p class="section-description">Ahorra con nuestros planes de suscripción mensual</p>
+            
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-badge">BÁSICO</div>
+                    <h3>Plan Mensual Básico</h3>
+                    <p class="package-price">$280.000<span>/mes</span></p>
+                    <p class="package-savings">Ahorra $40.000</p>
+                    <ul class="package-features">
+                        <li>4 limpiezas express al mes</li>
+                        <li>1 kit de productos básico</li>
+                        <li>Horario preferencial</li>
+                        <li>Soporte prioritario</li>
+                    </ul>
+                    <button class="btn-package" onclick="subscribePlan('Plan Básico')">Suscribirse</button>
+                </div>
+                
+                <div class="package-card featured">
+                    <div class="package-badge popular">MÁS POPULAR</div>
+                    <h3>Plan Mensual Premium</h3>
+                    <p class="package-price">$520.000<span>/mes</span></p>
+                    <p class="package-savings">Ahorra $80.000</p>
+                    <ul class="package-features">
+                        <li>2 limpiezas profundas al mes</li>
+                        <li>2 limpiezas express al mes</li>
+                        <li>1 kit premium incluido</li>
+                        <li>Servicio de urgencia gratis</li>
+                        <li>Descuento 10% en productos</li>
+                    </ul>
+                    <button class="btn-package" onclick="subscribePlan('Plan Premium')">Suscribirse</button>
+                </div>
+                
+                <div class="package-card">
+                    <div class="package-badge">VIP</div>
+                    <h3>Plan Mensual Elite</h3>
+                    <p class="package-price">$900.000<span>/mes</span></p>
+                    <p class="package-savings">Ahorra $140.000</p>
+                    <ul class="package-features">
+                        <li>4 limpiezas profundas al mes</li>
+                        <li>Limpiezas express ilimitadas</li>
+                        <li>Todos los productos incluidos</li>
+                        <li>Organización y decoración</li>
+                        <li>Servicio de conserjería</li>
+                        <li>Descuento 20% en servicios extra</li>
+                    </ul>
+                    <button class="btn-package" onclick="subscribePlan('Plan Elite')">Suscribirse</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nueva sección de Video de YouTube -->
+    <section id="video">
+        <div class="container">
+            <h2>Conoce Nuestro Trabajo</h2>
+            <p class="section-description">Mira cómo transformamos espacios y la calidad de nuestros servicios</p>
+            
+            <div class="video-container">
+                <!-- AQUÍ COLOCA EL ID DE TU VIDEO DE YOUTUBE -->
+                <!-- Ejemplo: Si tu video es https://www.youtube.com/watch?v=dQw4w9WgXcQ -->
+                <!-- Solo necesitas el ID: dQw4w9WgXcQ -->
+                <iframe 
+                    src="https://www.youtube.com/embed/TU_ID_DE_VIDEO_AQUI" 
+                    title="Video de Fascina" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            
+            <div class="video-description">
+                <h3>¿Por qué elegir Fascina?</h3>
+                <p>En este video podrás ver casos reales de nuestros servicios de limpieza, conocer a nuestro equipo profesional y descubrir por qué más de 500 clientes confían en nosotros para mantener sus hogares impecables.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nueva sección de testimonios -->
+    <section id="testimonials">
+        <div class="container">
+            <h2>Lo Que Dicen Nuestros Clientes</h2>
+            <p class="section-description">Más de 500 hogares confían en Fascina</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Excelente servicio. Mi casa quedó impecable y el equipo fue muy profesional. Totalmente recomendado."</p>
+                    <p class="testimonial-author">- María González</p>
+                    <p class="testimonial-location">Itagüí, Antioquia</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Los productos ecológicos son increíbles. Mi familia tiene alergias y no tuvimos ningún problema. Volveré a contratar."</p>
+                    <p class="testimonial-author">- Carlos Ramírez</p>
+                    <p class="testimonial-location">Medellín, Antioquia</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"El servicio post-evento fue perfecto. Después de la fiesta de cumpleaños de mi hija, dejaron todo como nuevo."</p>
+                    <p class="testimonial-author">- Andrea López</p>
+                    <p class="testimonial-location">Envigado, Antioquia</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Contraté el plan mensual premium y ha sido la mejor decisión. Ahorro tiempo y mi hogar siempre está perfecto."</p>
+                    <p class="testimonial-author">- Roberto Silva</p>
+                    <p class="testimonial-location">Sabaneta, Antioquia</p>
+                </div>
             </div>
         </div>
     </section>
@@ -125,11 +334,39 @@
         <div class="grid">
             <div class="card">
                 <h3>Nuestra Misión</h3>
-                <p>En Fascina, nos dedicamos a ofrecer servicios de limpieza de alta calidad directamente en tu hogar. Utilizamos técnicas especializadas para garantizar un 10/10</p>
+                <p>En Fascina, nos dedicamos a ofrecer servicios de limpieza de alta calidad directamente en tu hogar. Utilizamos técnicas especializadas y productos ecológicos para garantizar un resultado 10/10 en cada servicio. Creemos que un hogar limpio es un hogar feliz.</p>
             </div>
             <div class="card">
                 <h3>Nuestro Compromiso</h3>
-                <p>Nos comprometemos a usar productos ecológicos y a personalizar cada servicio según tus necesidades, asegurando tu satisfacción total.</p>
+                <p>Nos comprometemos a usar productos ecológicos certificados y a personalizar cada servicio según tus necesidades específicas, asegurando tu satisfacción total. Tu confianza es nuestra prioridad y trabajamos incansablemente para superarla.</p>
+            </div>
+            <div class="card">
+                <h3>Nuestro Equipo</h3>
+                <p>Contamos con un equipo de profesionales capacitados y certificados en técnicas de limpieza especializada. Cada miembro de Fascina pasa por un riguroso proceso de selección y entrenamiento continuo para ofrecerte el mejor servicio.</p>
+            </div>
+            <div class="card">
+                <h3>Nuestra Experiencia</h3>
+                <p>Con más de 5 años en el mercado y más de 10,000 servicios realizados, nos hemos consolidado como líderes en limpieza especializada en el Valle de Aburrá. Nuestra experiencia nos respalda.</p>
+            </div>
+        </div>
+
+        <!-- Nueva sección de estadísticas con contador -->
+        <div class="stats-section">
+            <div class="stat-item">
+                <div class="stat-number" data-target="500">0</div>
+                <div class="stat-label">Clientes Satisfechos</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="10000">0</div>
+                <div class="stat-label">Servicios Realizados</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="98">0</div>
+                <div class="stat-label">Tasa de Satisfacción</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Soporte al Cliente</div>
             </div>
         </div>
     </section>
@@ -141,57 +378,98 @@
                 <div class="card contact-info">
                     <h3>Información de Contacto</h3>
                     <p><strong>Teléfono:</strong> <a href="tel:3148859184">3148859184</a></p>
+                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/573148859184">Enviar mensaje</a></p>
                     <p><strong>Correo Electrónico:</strong> <a href="mailto:juancarloscardenas2008@gmail.com">juancarloscardenas2008@gmail.com</a></p>
+                    <p><strong>Horario de Atención:</strong></p>
+                    <p>Lunes a Viernes: 7:00 AM - 8:00 PM</p>
+                    <p>Sábados: 8:00 AM - 6:00 PM</p>
+                    <p>Domingos: 9:00 AM - 4:00 PM</p>
+                    <div class="social-links">
+                        <h4>Síguenos en redes sociales</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon">📘 Facebook</a>
+                            <a href="#" class="social-icon">📷 Instagram</a>
+                            <a href="#" class="social-icon">🐦 Twitter</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="card">
                     <h3>Envíanos un Mensaje</h3>
-                    <form>
-                        <input type="text" placeholder="Tu Nombre" required>
-                        <input type="email" placeholder="Tu Correo" required>
-                        <textarea placeholder="Tu Mensaje" rows="4" required></textarea>
-                        <button type="submit">Enviar</button>
+                    <form id="contactForm" onsubmit="handleSubmit(event)">
+                        <input type="text" id="name" placeholder="Tu Nombre" required>
+                        <input type="email" id="email" placeholder="Tu Correo" required>
+                        <input type="tel" id="phone" placeholder="Tu Teléfono" required>
+                        <select id="service" required>
+                            <option value="">Selecciona un servicio</option>
+                            <option value="express">Limpieza Express</option>
+                            <option value="profunda">Limpieza Profunda</option>
+                            <option value="premium">Limpieza Premium VIP</option>
+                            <option value="oficina">Limpieza de Oficinas</option>
+                            <option value="evento">Limpieza Post-Evento</option>
+                            <option value="construccion">Limpieza Post-Construcción</option>
+                            <option value="paquete">Paquete Mensual</option>
+                            <option value="producto">Compra de Productos</option>
+                        </select>
+                        <textarea id="message" placeholder="Tu Mensaje o Consulta" rows="4" required></textarea>
+                        <button type="submit">Enviar Mensaje</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Nueva sección de FAQ con accordion -->
+    <section id="faq">
+        <div class="container">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-container">
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <h3 class="faq-question">¿Debo estar en casa durante el servicio? <span class="faq-icon">+</span></h3>
+                    <p class="faq-answer">No es necesario. Muchos clientes nos confían las llaves y realizamos el servicio mientras están en el trabajo. Contamos con personal certificado y de total confianza.</p>
+                </div>
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <h3 class="faq-question">¿Qué pasa si no quedo satisfecho? <span class="faq-icon">+</span></h3>
+                    <p class="faq-answer">Ofrecemos garantía de satisfacción 100%. Si no quedas satisfecho, volvemos sin costo adicional o te devolvemos tu dinero.</p>
+                </div>
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <h3 class="faq-question">¿Los productos son seguros para mascotas? <span class="faq-icon">+</span></h3>
+                    <p class="faq-answer">Sí, todos nuestros productos son ecológicos, biodegradables y seguros para mascotas y niños.</p>
+                </div>
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <h3 class="faq-question">¿Con cuánta anticipación debo agendar? <span class="faq-icon">+</span></h3>
+                    <p class="faq-answer">Recomendamos agendar con al menos 48 horas de anticipación, aunque también manejamos servicios de urgencia según disponibilidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>© 2025 Fascina. Todos los derechos reservados.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Fascina</h3>
+                <p>Servicios de limpieza profesional a domicilio en el Valle de Aburrá</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <a href="#home">Inicio</a>
+                <a href="#products">Productos</a>
+                <a href="#services">Servicios</a>
+                <a href="#packages">Paquetes</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>Tel: 3148859184</p>
+                <p>Email: juancarloscardenas2008@gmail.com</p>
+            </div>
+        </div>
+        <p class="footer-bottom">© 2025 Fascina. Todos los derechos reservados.</p>
     </footer>
 
-    <script>
-        let currentSlide = {
-            products: 0,
-            services: 0
-        };
+    <!-- Botón de scroll to top -->
+    <button id="scrollToTop" onclick="scrollToTop()">↑</button>
 
-        function moveSlider(type, direction) {
-            const slider = document.getElementById(`${type}-slider`);
-            const cards = slider.children;
-            const totalCards = cards.length;
-            
-            currentSlide[type] += direction;
-            
-            if (currentSlide[type] < 0) {
-                currentSlide[type] = totalCards - 1;
-            } else if (currentSlide[type] >= totalCards) {
-                currentSlide[type] = 0;
-            }
-            
-            const offset = -currentSlide[type] * 100;
-            slider.style.transform = `translateX(${offset}%)`;
-        }
-
-        // Auto-slide cada 5 segundos
-        setInterval(() => {
-            moveSlider('products', 1);
-        }, 5000);
-
-        setInterval(() => {
-            moveSlider('services', 1);
-        }, 5500);
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
+
 
